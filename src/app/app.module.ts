@@ -1,21 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { CribsService } from './services/cribs.service';
 
 import { AppComponent } from './app.component';
 import { CribListingComponent } from './crib-listing/crib-listing.component';
 import { CribCardComponent } from './crib-card/crib-card.component';
+import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CribListingComponent,
-    CribCardComponent
+    CribCardComponent,
+    AddListingFormComponent
   ],
   imports: [
-    BrowserModule, HttpModule,
+    BrowserModule, HttpModule, FormsModule,
   ],
   providers: [CribsService],
   bootstrap: [AppComponent]
